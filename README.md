@@ -1,4 +1,4 @@
-# Projeto Integrador - Modelo
+# Projeto Integrador - BooksMatch Locação de Livros
 
 Um modelo para o desenvolvimento do Projeto Integrador do Curso de Técnico em Desenvolvimento de Sistemas para a Internet Integrado ao Ensino Médio do IFC - Campus Araquari.
 
@@ -11,45 +11,34 @@ Links do projeto:
 - [Backend](github.com/marcoandre/pi-backend)
 - [Frontend](github.com/marcoandre/pi-frontend)
 
-## 1- Ponto de Vendas (PDV)
-
-**Gerenciamento de vendas para uma padaria**
-
-O nosso cliente, Sr. Genival, tem uma padaria de bairro chamada padaria Pão Genial e, devido a qualidade de seus produtos, ela está crescendo rapidamente. Recentemente, ele contratou mais funcionários para atendimento, caixa, panificação, etc.
-Assim, atualmente, ele consegue concentrar seus esforços para melhorar a gestão da padaria. Para isso, ele quer instalar um sistema de controle de vendas que permita ao caixa lançar as vendas realizadas. Como sua intenção
-é melhorar a gestão do negócio, é muito importante que ele consiga ter
-relatórios, como por exemplo, de vendas.
-
-**Locação de Livros**
-
-Nosso sistema ira facilitar a escolha e locação dos livros, e fara relatorios semanais e mensais das vendas.
-
-Escolhemos esse sistema por que gostamos de livros e achamos a ideia de indicação de livros interessante.
-
 # Situação Problema
 
-![Ciclo da Venda](docs/ciclo_da_venda.webp "Ciclo da Venda")
+<!-- ![Ciclo da Venda](docs/ciclo_da_venda.webp "Ciclo da Venda") -->
 
-Nossa biblioteca foi fundada no ano de 2021 pelas alunas Amanda e Mariana do Instituto Federal Catarinense, Campus Araquari, a empresa chama-se BooksMatch, e tem esse nome pelo diferencial de fazer grupos de conversa, para os leitores interagirem entre si sobre seus livros preferidos. 
+A BooksMatch foi fundada no ano de 2021 pelas alunas Amanda e Mariana do Instituto Federal Catarinense, Campus Araquari. Seu foco está no diferencial de fazer grupos de conversa, para os leitores interagirem entre si sobre seus livros preferidos. 
 
-Nossa biblioteca é dividida por corredores, com prateleiras organizando os livros em duas partes: gêneros e categorias. 
+Atualmente, nossa biblioteca é dividida por corredores, com prateleiras organizando os livros por categorias. 
 
 Após o cliente fazer a escolha do seu livro, iniciamos o processo de locação que atualmente consiste em anotar em uma agenda física os dados do cliente, como: nome, endereço, email e telefone; e os dados do livro locado, como: nome, data de locação e devolução, número de série e seção.
 
-Para efetuar o pagamento, o cliente tem as opções dinheiro, pix ou cartão (débito/crédito), caso haja atraso na devolução do livro, cobramos uma taxa que o cliente precisa pagar antes de alugar o próximo livro.
-
-Um dos primeiros problemas que nosso software irá resolver é o da agenda, uma agenda física não é eficiente, já que pode facilmente rasgar, molhar ou ser perdida, já o nosso sistema poderá ser acessado de qualquer dispositivo, evitando problemas como a perda de dados. Será também uma vantagem do site poder encontrar com mais facilidade e economia de tempo o livro desejado de acordo com os gostos do cliente/usuário, usando filtros de gênero, categoria, autor… O sistema gerará automaticamente a multa de atraso, que ficará disponível para visualização no perfil do usuário, evitando erros na contagem, que pode acontecer facilmente quando feita manualmente. 
-
+Para efetuar o pagamento, o cliente tem as opções dinheiro, pix ou cartão (débito/crédito). Caso haja atraso na devolução do livro, cobramos uma taxa que o cliente precisa pagar antes de alugar o próximo livro.
 
 # Descrição da proposta
 
-O foco de ação do BooksMatch é a locação de livros. Apenas as proprietárias têm acesso a administração do sistema, mas qualquer usuario cadastrado pode navergar no site. O site permitirá a escolha, seleção e pagamento de livros, como também acesso ao chat para conversas entre os usuários.
+O foco de ação do BooksMatch é a locação de livros. Apenas as proprietárias têm acesso a administração do sistema, mas qualquer usuario cadastrado pode navegar no site. O site permitirá a escolha, seleção e pagamento de livros, como também acesso ao chat para conversas entre os usuários.
+
+Um dos primeiros problemas que nosso software irá resolver é o da agenda. Uma agenda física não é eficiente, já que pode facilmente rasgar, molhar ou ser perdida. Já o nosso sistema poderá ser acessado de qualquer dispositivo, evitando problemas como a perda de dados. 
+
+Será também uma vantagem do site poder encontrar com mais facilidade e economia de tempo o livro desejado de acordo com os gostos do cliente/usuário, usando filtros de gênero, categoria, autor, etc. 
+
+O sistema gerará automaticamente a multa de atraso, que ficará disponível para visualização no perfil do usuário, evitando erros na contagem, que pode acontecer facilmente quando feita manualmente. 
 
 # Regras de negócio
 
-RN01 - Cadastro: Para navegar no site o usuário deve ser previamente cadastrado.
+FIXME: FORMATAR
 
-RN02 - Locação do livro: Para fazer a locação, é necessário que pelo menos um livro seja selecionado.
+- **RN01 - Cadastro:** Para navegar no site o usuário deve ser previamente cadastrado.
+- RN02 - Locação do livro: Para fazer a locação, é necessário que pelo menos um livro seja selecionado.
 
 RN03 - Realizar Locação: Para realizar a locação, apenas leitores com cadastro e nenhuma multa em aberto.
 
@@ -61,37 +50,46 @@ RN06 - Quantidade máxima: O usuário poderá locar no máximo 2 livros por vez.
 
 RN07 – Relatório de Fluxo de Caixa: O relatório de fluxo de caixa será permitido somente para os administradores.
 
-# Regras de negócio - Requisitos funcionais RF
+# Requisitos funcionais RF
+FIXME: FORMATAR E SEPARAR EM ENTRADA PROCESSAMENTO E SAÍDA
 
-R.F. 01 - Registro de Usuário: O sistema deve permitir o registro do usuário, criando um perfil para tal, e o direcionando para a página inicial.
-Dados necessários: Nome, email e senha.
-Usuários: Todos os níveis de usuário.
 
-R.F. 02 - Autenticação de usuário: O sistema deve permitir autenticar o acesso ao sistema, verificando se o usuário pode acessá-lo e, caso possa, o direcionando para a página principal de seu perfil de acesso.
-Dados necessários: Login, senha e nível de permissão.
-Usuários: Todos os níveis de usuário.
+ENTRADA
 
-R.F. 03 - Registro de Livros: O sistema deve permitir registrar livros.
-Dados necessários: Nome, número de série, gênero, categoria, editora e quantidade.
+- **- R. F.  01 - Registro de Usuário:** O sistema deve permitir o registro do usuário, criando um perfil para tal, e o direcionando para a página inicial.
+    - - **Dados necessários:** Nome, email e senha.
+    - Usuários: Todos os níveis de usuário.
+
+- R. F.  03 - Registro de Livros: O sistema deve permitir registrar livros.
+- **Dados necessários:** Nome, número de série, gênero, categoria, editora e quantidade.
 Usuários: Apenas os administradores.
 
-R.F. 04 - Relatórios de livros: O sistema deve permitir a emissão de relatórios semanais dos livros locados.
-Dados necessários: Nome do livro, data de locação e devolução, valor e caso houver, multa de atraso.
-Usuários: Apenas administradores.
+PROCESSAMENTO
 
-R.F. 05 - Multa: O sistema deve calcular a multa de acordo com os dias de atraso.
-Dados necessários: Data de locação e devolução. 
+- R. F.  02 - Autenticação de usuário: O sistema deve permitir autenticar o acesso ao sistema, verificando se o usuário pode acessá-lo e, caso possa, o direcionando para a página principal de seu perfil de acesso.
+- **Dados necessários:** Login, senha e nível de permissão.
+Usuários: Todos os níveis de usuário.
+
+- R. F.  05 - Multa: O sistema deve calcular a multa de acordo com os dias de atraso.
+- **Dados necessários:** Data de locação e devolução. 
 Usuário: Todos usuários.
 
-R.F. 06 - Finanças: O sistema deve permitir relatórios mensais de entrada e saída das finanças. 
-Dados necessários: Valores de entrada e saída
-Usuário: Apenas administradores
-
-R.F. 07 - Pagamento: Permitir que o usuário realize o pagamento via pix ou cartão de crédito/débito.
-Dados necessários: Número do cartão, opção de pagamento, validade do cartão e senha.
+- R. F.  07 - Pagamento: Permitir que o usuário realize o pagamento via pix ou cartão de crédito/débito.
+- **Dados necessários:** Número do cartão, opção de pagamento, validade do cartão e senha.
 Usuário: Todos os usuários.
 
-# Regras de negócio - Requisitos não funcionais RNF
+SAIDA
+
+- R. F.  04 - Relatórios de livros: O sistema deve permitir a emissão de relatórios semanais dos livros locados.
+- **Dados necessários:** Nome do livro, data de locação e devolução, valor e caso houver, multa de atraso.
+Usuários: Apenas administradores.
+
+- R. F.  06 - Finanças: O sistema deve permitir relatórios mensais de entrada e saída das finanças. 
+- **Dados necessários:** Valores de entrada e saída
+Usuário: Apenas administradores
+
+
+# Requisitos não funcionais RNF
 
 RNF 01 - Navegador: O sistema deverá ser compatível com o Google Chrome, Microsoft Edge, Opera e Firefox.
 
@@ -105,3 +103,6 @@ RNF05 - Desempenho: O software deve ser capaz de processar um número considerad
 
 RNF06 - Manutenção: O software deve ser facilmente mantido e atualizado, permitindo que os desenvolvedores adicionem novos recursos, a manutenção será feita 1 vez por semana.
 
+BACKEND, MOBILE, FRONTEND
+
+VERSÕES PARA CELULAR (ANDROID/IOS)
