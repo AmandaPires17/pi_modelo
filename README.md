@@ -35,74 +35,67 @@ O sistema gerará automaticamente a multa de atraso, que ficará disponível par
 
 # Regras de negócio
 
-FIXME: FORMATAR
-
 - **RN01 - Cadastro:** Para navegar no site o usuário deve ser previamente cadastrado.
-- RN02 - Locação do livro: Para fazer a locação, é necessário que pelo menos um livro seja selecionado.
-
-RN03 - Realizar Locação: Para realizar a locação, apenas leitores com cadastro e nenhuma multa em aberto.
-
-RN04 - Registro de Locação: Os proprietários devem possuir acesso aos registros de locação.
-
-RN05 – Pagamento de Multa: O leitor que passar de 15 dias com o livro deverá pagar a multa de um real por dia de atraso.
-
-RN06 - Quantidade máxima: O usuário poderá locar no máximo 2 livros por vez.
-
-RN07 – Relatório de Fluxo de Caixa: O relatório de fluxo de caixa será permitido somente para os administradores.
+- **RN02 - Locação do livro:** Para fazer a locação, é necessário que pelo menos um livro seja selecionado.
+- **RN03 - Realizar Locação:** Para realizar a locação, apenas leitores com cadastro e nenhuma multa em aberto.
+- **RN04 - Registro de Locação:** Os proprietários devem possuir acesso aos registros de locação.
+- **RN05 – Pagamento de Multa:** O leitor que passar de 15 dias com o livro deverá pagar a multa de um real por dia de atraso.
+- **RN06 - Quantidade máxima:** O usuário poderá locar no máximo 2 livros por vez.
+- **RN07 – Relatório de Fluxo de Caixa:** O relatório de fluxo de caixa será permitido somente para os administradores.
 
 # Requisitos funcionais RF
-FIXME: FORMATAR E SEPARAR EM ENTRADA PROCESSAMENTO E SAÍDA
 
+**ENTRADA**
 
-ENTRADA
+- **R. F.  01 - Registro de Usuário:** O sistema deve permitir o registro do usuário, criando um perfil para tal, e o direcionando para a página inicial.
+   - **Dados necessários:** Nome, email e senha.
+   - **Usuários:** Todos os níveis de usuário.
+- **- R. F.  02 - Registro de Livros:** O sistema deve permitir registrar livros.
+   - **Dados necessários:** Nome, número de série, gênero, categoria, editora e quantidade.
+   - **Usuários:** Apenas os administradores.
 
-- **- R. F.  01 - Registro de Usuário:** O sistema deve permitir o registro do usuário, criando um perfil para tal, e o direcionando para a página inicial.
-    - - **Dados necessários:** Nome, email e senha.
-    - Usuários: Todos os níveis de usuário.
+**PROCESSAMENTO**
 
-- R. F.  03 - Registro de Livros: O sistema deve permitir registrar livros.
-- **Dados necessários:** Nome, número de série, gênero, categoria, editora e quantidade.
-Usuários: Apenas os administradores.
+- **R. F.  03 - Autenticação de usuário:** O sistema deve permitir autenticar o acesso ao sistema, verificando se o usuário pode acessá-lo e, caso possa, o direcionando para a página principal de seu perfil de acesso.
+   - **Dados necessários:** Login, senha e nível de permissão.
+   - **Usuários:** Todos os níveis de usuário.
+- **R. F.  04 - Multa:** O sistema deve calcular a multa de acordo com os dias de atraso.
+   - **Dados necessários:** Data de locação e devolução. 
+   - **Usuário:** Todos usuários.
+- **R. F.  05 - Pagamento:** Permitir que o usuário realize o pagamento via pix ou cartão de crédito/débito.
+   - **Dados necessários:** Número do cartão, opção de pagamento, validade do cartão e senha.
+   - **Usuário:** Todos os usuários.
 
-PROCESSAMENTO
+**SAÍDA**
 
-- R. F.  02 - Autenticação de usuário: O sistema deve permitir autenticar o acesso ao sistema, verificando se o usuário pode acessá-lo e, caso possa, o direcionando para a página principal de seu perfil de acesso.
-- **Dados necessários:** Login, senha e nível de permissão.
-Usuários: Todos os níveis de usuário.
-
-- R. F.  05 - Multa: O sistema deve calcular a multa de acordo com os dias de atraso.
-- **Dados necessários:** Data de locação e devolução. 
-Usuário: Todos usuários.
-
-- R. F.  07 - Pagamento: Permitir que o usuário realize o pagamento via pix ou cartão de crédito/débito.
-- **Dados necessários:** Número do cartão, opção de pagamento, validade do cartão e senha.
-Usuário: Todos os usuários.
-
-SAIDA
-
-- R. F.  04 - Relatórios de livros: O sistema deve permitir a emissão de relatórios semanais dos livros locados.
-- **Dados necessários:** Nome do livro, data de locação e devolução, valor e caso houver, multa de atraso.
-Usuários: Apenas administradores.
-
-- R. F.  06 - Finanças: O sistema deve permitir relatórios mensais de entrada e saída das finanças. 
-- **Dados necessários:** Valores de entrada e saída
-Usuário: Apenas administradores
+- **R. F.  06 - Relatórios de livros:** O sistema deve permitir a emissão de relatórios semanais dos livros locados.
+   - **Dados necessários:** Nome do livro, data de locação e devolução, valor e caso houver, multa de atraso.
+   - **Usuários:** Apenas administradores.
+- **R. F.  07 - Finanças:** O sistema deve permitir relatórios mensais de entrada e saída das finanças. 
+   - **Dados necessários:** Valores de entrada e saída
+   - **Usuário:** Apenas administradores
 
 
 # Requisitos não funcionais RNF
 
-RNF 01 - Navegador: O sistema deverá ser compatível com o Google Chrome, Microsoft Edge, Opera e Firefox.
+**RNF 01 - Navegador:** O sistema deverá ser compatível com o Google Chrome, Microsoft Edge, Opera e Firefox.
 
-RNF02 - Disponibilidade: O sistema deverá estar disponível 24 horas por dia, 6 dias por semana, com 1 dia de manutenção.
+**RNF02 - Disponibilidade:** O sistema deverá estar disponível 24 horas por dia, 6 dias por semana, com 1 dia de manutenção.
 
-RNF03 - Segurança: O sistema deverá ser seguro, evitando que dados sensíveis dos clientes sejam expostos a terceiros.
+**RNF03 - Segurança:** O sistema deverá ser seguro, evitando que dados sensíveis dos clientes sejam expostos a terceiros.
 
-RNF04 - Responsividade: O sistema deverá ser responsivo, permitindo que os clientes acessem a loja online de qualquer dispositivo, como computadores, tablets e smartphones.
+**RNF04 - Responsividade:** O sistema deverá ser responsivo, permitindo que os clientes acessem a loja online de qualquer dispositivo, como computadores, tablets e smartphones.
 
-RNF05 - Desempenho: O software deve ser capaz de processar um número considerado de acessos simultaneamente sem diminuir significativamente o desempenho.
+**RNF05 - Desempenho:** O software deve ser capaz de processar um número considerado de acessos simultaneamente sem diminuir significativamente o desempenho.
 
-RNF06 - Manutenção: O software deve ser facilmente mantido e atualizado, permitindo que os desenvolvedores adicionem novos recursos, a manutenção será feita 1 vez por semana.
+**RNF06 - Manutenção:** O software deve ser facilmente mantido e atualizado, permitindo que os desenvolvedores adicionem novos recursos, a manutenção será feita 1 vez por semana.
 
-BACKEND, MOBILE, FRONTEND
+**RNF07 - Tecnologia Front-end:** Para a exibição em front-end, o software utilizará o CSS3 e o HTML5, além do framework VueJS.
 
-VERSÕES PARA CELULAR (ANDROID/IOS)
+**RNF08 - Tecnologia Back-end:** O software será desenvolvido utilizando o framework Django com o Django Res Framework.
+
+**RNF09 - Autenticação:** Para realizar o acesso ao sistema é necessário ter um usuário de autenticação criado pelo administrador, além da possibilidade de solicitar um envio de redefinição de senha.
+
+**RNF10 - Interoperabilidade:** O banco de dados utilizado será o MySQL.
+
+**RNF11 - Tecnologia Mobile:** Para o desenvolvimento para smartphones, será utilizado o framework React Native.
