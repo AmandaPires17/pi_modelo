@@ -102,5 +102,8 @@ O sistema gerará automaticamente a multa de atraso, que ficará disponível par
 
 # Casos De Uso
 
-![Casos de Uso](Donwlonds /../CasosDeUso.png "Casos de Uso")
-![Banco de Dados](Downlonds /../Dbmodeller.jpeg "Banco de Dados")
+![Casos de Uso](docs/CasosDeUso.png "Casos de Uso")
+
+
+
+![Banco de Dados](docs/Dbmodeller.jpeg "Banco de Dados")
