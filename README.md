@@ -99,3 +99,8 @@ O sistema gerará automaticamente a multa de atraso, que ficará disponível par
 **RNF10 - Interoperabilidade:** O banco de dados utilizado será o MySQL.
 
 **RNF11 - Tecnologia Mobile:** Para o desenvolvimento para smartphones, será utilizado o framework React Native.
+
+# Casos De Uso
+
+![Casos de Uso](Donwlonds /../CasosDeUso.png)
+![Banco de Dados](Downlonds /../Dbmodeller.jpeg)
